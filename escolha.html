@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #323c73;
+        }
+
+        .container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            flex-wrap: wrap;
+            z-index: 1;
+        }
+
+        .container .card{
+            position: relative;
+            width: 280px;
+            height: 400px;
+            margin: 30px;
+            box-shadow: 20px 20px 50px #ebf0f265;
+            border-radius: 15px;
+            background-color: #55d9d9;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid white;
+            border-left: 1px solid white;
+        }
+
+        .container .card .content{
+            cursor: default;
+            padding:20px;
+            text-align: center;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .container .card:hover .content {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+
+        .container .card .content h2{
+            position: absolute;
+            top: -80px;
+            right: 30px;
+            font-size: 8em;
+            color:rgba(144, 113, 69,-0.005) ;
+            pointer-events: none;
+        }
+
+        .container .card .content h3{
+            font-size: 1.8em;
+            color: #222601;
+            z-index: 1;
+            padding-bottom: 10px;
+        }
+
+        .container .card .content p{
+            font-size: 1em;
+            color: black;
+            font-weight: 300;
+        }
+
+        .container .card .content a{
+            position: relative;
+            display: inline-block;
+            padding: 8px 20px;
+            margin-top: 15px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 20px;
+            box-shadow: 0.5px 10px rgba(255, 255, 255, 0.2);
+            font-family: "Bebas Neue", "Solway", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="content">
+                <h2>01</h2>
+                <h3>Historia</h3>
+                <p>A cultura brasileira, assim como a formação étnica do povo brasileiro, é vasta e diversa. Nossos hábitos culturais receberam elementos e influências de povos indígenas, africanos, portugueses, espanhóis, italianos e japoneses, entre outros, devido à colonização, à imigração e aos povos que já habitavam aqui...</p>
+                    <a href="historia.html">Saiba mais</a>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="content">
+                <h2>02</h2>
+                <h3>Origem</h3>
+                <p>A cultura brasileira nasceu através da miscigenação dos povos indígenas que já habitavam no brasil, mas logo no em 1500 os portugueses chegaram até as terras dos indígenas, os povos nativos mantinham as suas crenças e praticavam seus elementos culturais aliados a um modo de vida simples e em contato com a natureza.</p>
+                    <a href="origem.html">Saiba mais</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>VanillaTilt.init(document.querySelectorAll(".card"));</script>
+</body>
+
+</html>
